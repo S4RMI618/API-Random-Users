@@ -1,0 +1,37 @@
+
+
+
+img {
+    width: 200px !important;
+    max-width: 200px !important; 
+}
+
+li {
+    list-style: none !important;
+    display: flex;
+}
+
+#countryImg {
+    width: 20px !important;
+}
+
+
+
+
+
+@media (min-width: 767px) {
+    
+    #root {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* @media (min-width: 992px) {
+    #root {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+} */
