@@ -1,7 +1,7 @@
 import { getEmojiCountry } from "./getCountry.js";
 var space = '&nbsp'
 
-const API = 'https://randomuser.me/api/?results=20'
+const API = 'https://randomuser.me/api/?results=50'
 
 const app = () => {
     fetch(API)
