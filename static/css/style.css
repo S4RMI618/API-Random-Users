@@ -21,9 +21,9 @@ body {
 }
 
 img {
-    width: 180px !important;
+    width: 95% !important;
     max-width: 180px !important;
-    border-radius: 5% !important;
+    border-top-left-radius: 10px !important;
 }
 
 li {
@@ -44,11 +44,17 @@ li {
 .bg-name {
     width: 100%;
     background-color: var(--secondary-color);
+}
+
+div .bg-name {
+    width: 95%;
+    background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
-    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 10px;
 }
 
 
@@ -61,18 +67,13 @@ li {
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
     }
-    .bg-custom {
-        background-color: var(--primary-color);
-        border-top-left-radius: 10px ;
-        border-bottom-left-radius: 10px;
-    }
     
 }
 
-/* @media (min-width: 992px) {
+/* @media (min-width: 1200px) {
     #root {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
     }
 } */

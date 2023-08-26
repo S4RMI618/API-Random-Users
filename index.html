@@ -18,8 +18,8 @@
     <h1 class="display-1 text-center bg-name">API Random Users</h1>
 
     <div class="col-6 m-auto my-4">
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <form class="d-flex" id="searchForm">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
             <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
     </div>
@@ -34,7 +34,7 @@
     <template id="template-card">
         <div class="row">
             <div class="col-5 col-md-4 d-flex flex-column justify-content-center align-content-center align-items-center">
-                <img class="card-img m-3 mb-2 pb-0">
+                <img class="card-img m-3 mb-0 pb-0">
                 <h4 class="text-center p-0 fw-semibold bg-name"></h4>
             </div>
             <div class="col-7 col-md-8 ps-4 pt-2 pe-0 rounded-0 rounded-end-2 d-flex align-items-center align-content-center bg-custom">
@@ -51,5 +51,6 @@
 
     <script type="module" src="./static/js/main.js"></script>
     <script type="module" src="./static/js/getCountry.js"></script>
+    <script type="module" src="./static/js/bold.js"></script>
 </body>
 </html>

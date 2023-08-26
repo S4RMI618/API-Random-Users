@@ -1,5 +1,6 @@
 import { getEmojiCountry } from "./getCountry.js";
-var space = '&nbsp'
+import { bold } from "./bold.js";
+import { searchBar } from "./searchBar.js";
 
 const API = 'https://randomuser.me/api/?results=50'
 
@@ -16,6 +17,7 @@ const app = () => {
             return a.name.first.localeCompare(b.name.first);
         });
         renderData(sortedResults);
+        searchBar(sortedResults);
     })
     .catch(err => {
         console.error("Error: ", err);
@@ -49,8 +51,5 @@ function renderData(data) {
         });
     }
 
-    function bold(param) {
-        return  `<strong>${param}: ${space}</strong>`
-    } 
 
 app()
