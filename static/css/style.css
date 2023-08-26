@@ -1,9 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
+:root {
+    --primary-color: #e8e8e8;
+    --secondary-color: #c8c8c8;
+    --accent-color: #ffc107;
+}
 
+body {
+    font-family: 'Lora', serif;
+}
+
+#countryImg {
+    width: 20px !important;
+}
+
+#root {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+}
 
 img {
-    width: 200px !important;
-    max-width: 200px !important; 
+    width: 180px !important;
+    max-width: 180px !important;
+    border-radius: 5% !important;
 }
 
 li {
@@ -11,10 +31,25 @@ li {
     display: flex;
 }
 
-#countryImg {
-    width: 20px !important;
+.row {
+    border: 5px solid var(--primary-color) !important;
+    border-radius: 15px;
 }
 
+.bg-custom {
+    background-color: var(--primary-color);
+    
+}
+
+.bg-name {
+    width: 100%;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 5px;
+}
 
 
 
@@ -24,8 +59,14 @@ li {
     #root {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 50px;
     }
+    .bg-custom {
+        background-color: var(--primary-color);
+        border-top-left-radius: 10px ;
+        border-bottom-left-radius: 10px;
+    }
+    
 }
 
 /* @media (min-width: 992px) {
