@@ -21,8 +21,7 @@ body {
 }
 
 img {
-    width: 95% !important;
-    max-width: 180px !important;
+    width: 100% !important;
     border-top-left-radius: 10px !important;
 }
 
@@ -34,6 +33,8 @@ li {
 .row {
     border: 5px solid var(--primary-color) !important;
     border-radius: 15px;
+    height: auto;
+    transition: all 0.3s ease;
 }
 
 .bg-custom {
@@ -43,11 +44,13 @@ li {
 
 .bg-name {
     width: 100%;
+    margin: 0;
+    padding: 0;
     background-color: var(--secondary-color);
 }
 
 div .bg-name {
-    width: 95%;
+    width: 100%;
     background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
@@ -57,14 +60,18 @@ div .bg-name {
     border-bottom-left-radius: 10px;
 }
 
-
+.filter {
+    visibility: hidden;
+    opacity: 0;
+    order: 1;
+}
 
 
 @media (min-width: 767px) {
     
     #root {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
         gap: 50px;
     }
     

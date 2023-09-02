@@ -1,17 +1,17 @@
-const searchForm = document.getElementById('searchForm');
-const searchInput = document.getElementById('searchInput');
-
-export function searchBar(fetching) {
-    searchForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-    
-        const search = searchInput.value;
-        console.log(search)
-    
-        const searchResults = fetching.filter(user => user.name.first.includes(search))
-
-        return searchResults
+const d = document;
+export function searchBar(input, selector) {
+    d.addEventListener('keyup', e => {
+        if (e.target.matches(input)) {
+            console.log(e.key)
+            d.querySelectorAll(selector).forEach(el => {
+                el.textContent.toLowerCase().includes(e.target.value)
+                ? el.classList.remove('filter')
+                : el.classList.add('filter')
+            })
+        }
+        
     })
+    
 }
 
 

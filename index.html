@@ -1,49 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Users Random</title>
 
     <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="./static/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <h1 class="display-1 text-center bg-name">API Random Users</h1>
 
     <div class="col-6 m-auto my-4">
         <form class="d-flex" id="searchForm">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
-            <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
     </div>
 
-    <div id="root" class="container"> 
-         <!-- My APP -->  
+    <div id="root" class="container">
+        <!-- My APP -->
     </div>
 
-<!-- Muestre una tarjeta por cada usuario,
+    <!-- Muestre una tarjeta por cada usuario,
      que contenga al menos: nombre completo,
      foto de usuario, email, teléfono y ubicación. -->
     <template id="template-card">
         <div class="row">
-            <div class="col-5 col-md-4 d-flex flex-column justify-content-center align-content-center align-items-center">
-                <img class="card-img m-3 mb-0 pb-0">
-                <h4 class="text-center p-0 fw-semibold bg-name"></h4>
+            <div class="col-5 col-md-4 my-2 d-flex flex-column justify-content-center align-content-center">
+                <div class="col-12">
+                    <img class="col-12 w-100">
+                    <h4 class="col-12 text-center p-0 fw-semibold bg-name"></h4>
+                </div>
             </div>
-            <div class="col-7 col-md-8 ps-4 pt-2 pe-0 rounded-0 rounded-end-2 d-flex align-items-center align-content-center bg-custom">
+            <div
+                class="col-7 col-md-8 ps-4 pt-2 pe-0 rounded-0 rounded-end-2 d-flex align-items-center align-content-center bg-custom">
                 <ul class="m-0 p-0">
-                    <li><p id="email"></p></li>
-                    <li><p id="phone"></p></li>
-                    <li><p id="country"></p></li>
-                    <li><p id="location"></p> </li>
-                    <li><p id="address"></p></li>
+                    <li>
+                        <p id="email"></p>
+                    </li>
+                    <li>
+                        <p id="phone"></p>
+                    </li>
+                    <li>
+                        <p id="country"></p>
+                    </li>
+                    <li>
+                        <p id="location"></p>
+                    </li>
+                    <li>
+                        <p id="address"></p>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -53,4 +68,5 @@
     <script type="module" src="./static/js/getCountry.js"></script>
     <script type="module" src="./static/js/bold.js"></script>
 </body>
+
 </html>

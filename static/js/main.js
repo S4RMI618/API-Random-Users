@@ -17,7 +17,7 @@ const app = () => {
             return a.name.first.localeCompare(b.name.first);
         });
         renderData(sortedResults);
-        searchBar(sortedResults);
+        searchBar("#searchInput", ".row")
     })
     .catch(err => {
         console.error("Error: ", err);
@@ -49,7 +49,7 @@ function renderData(data) {
            fragment.appendChild(clone);
            container.appendChild(fragment);
         });
-    }
+}
 
 
 app()
